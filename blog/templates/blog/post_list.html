@@ -9,7 +9,14 @@
 				<a href="">Mimi's Blog</a>
 			</h1>
 		</div>
-
+		{% for post in posts %}
+			<div>
+				<p>published: {{post.published_date}}</p>
+				<h2><a href="">{{post.title}}</a></h2>
+				<p>{{post.text|linebreaksbr}}</p>
+			</div>
+			
+		{% endfor %}
 		<div>
 			<p>Published: 14:12:16 22:58</p>
 			<h2>First post</h2>
